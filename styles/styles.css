@@ -1,0 +1,186 @@
+/*** General Styles ***/
+* {
+  font-family: 'Inter', sans-serif;
+}
+.bg-body {
+  background-color: #f3f5fc;
+}
+.container, .container__header, .container__main, .section__user-text, .section__user-button {
+  display: flex;
+  flex-direction: column;
+}
+.container__header, .container__main {
+  padding: 0 1em;
+}
+/*** Header Styles ***/
+.header__logo {
+  margin: 0.75em 0;
+  font-weight: 700;
+  color: #0a3871;
+}
+/*** Main Styles ***/
+.container__main {
+  margin: 3em 0 1.5em 0;
+}
+/*** User Text Styles ***/
+.user-text__text-area {
+  border: 0;
+  color: #0a3871;
+  font-size: 2em;
+  background-color: transparent;
+}
+.user-text__text-area::placeholder {
+  color: #609ED4;
+}
+.user-text__info-message {
+  color: #495057;
+  font-size: 0.75em;
+  margin-bottom: 1.5em;
+}
+.user-text__info-message::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5em;
+  background-image: url(../img/info_icon.svg);
+  transform: translateY(3px);
+}
+.user-button__btn, .encrypted__btn {
+  padding: 1.5em;
+  border-radius: 1.5em;
+  margin-bottom: 1.5em;
+  border: 1px solid #0a3871;
+  background-color: transparent;
+  color: #0a3871;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.user-button__btn:hover, .encrypted__btn:hover {
+  background-color: #e3e7f6;
+  box-shadow: 0px 0px 15px 0px #AAB2D5;
+}
+.user-button__btn:first-child {
+  color: #fff;
+  background-color: #0a3871;
+}
+.user-button__btn:first-child:hover {
+  background-color: #072B61;
+}
+/*** Encript Text Styles ***/
+.section__encrypted-text {
+  margin-top: 1.5em;
+  padding: 2.5em;
+  text-align: center;
+  border-radius: 1.5em;
+  background-color: #fff;
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.wellcome__munheco {
+  display: none;
+  max-width: 100%;
+}
+.wellcome__title {
+  margin-top: 0;
+  line-height: 120%;
+  color: #343A40;
+}
+.wellcome__text {
+  margin-bottom: 0;
+  line-height: 150%;
+  color: #495057;
+}
+.encrypted__btn {
+  min-width: 100%;
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.encrypted-text__encrypted.inactive, .encrypted-text__wellcome.inactive {
+  display: none;
+}
+.encrypted__text {
+  margin: 0;
+  text-align: left;
+  font-size: 1.3em;
+  color: #495057;
+}
+/*** Media Queries - Tablet ***/
+@media screen and (min-width: 426px) {
+  .container__header, .container__main {
+    padding: 0 2.5em;
+  }
+  .section__user-button {
+    flex-direction: row;
+  }
+  .user-button__btn {
+    width: 100%;
+  }
+  .user-button__btn:first-child {
+    margin-right: 0.75em;
+  }
+  .user-button__btn:last-child {
+    margin-left: 0.75em;
+  }
+}
+/*** Media Queries - Desktop ***/
+@media screen and (min-width: 769px) {
+  .container, .container__header, .container__main {
+    flex-direction: row;
+  }
+  .container {
+    min-height: 100vh;
+  }
+  .container__header, .container__main {
+    padding: 0 1.5em;
+  }
+  .container__header {
+    width: 15%;
+    justify-content: center;
+  }
+  .container__main {
+    width: 85%;
+    margin: 2.5em 0;
+  }
+  .container__main .main__section:first-child {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 2.5em 2.5em 2.5em 0;
+  }
+  .section__user-text, .user-text__text-area {
+    height: 100%;
+  }
+  .user-button__btn {
+    margin-bottom: 0;
+  }
+  .container__main .main__section:last-child {
+    width: 40%;
+    min-height: 100%;
+    padding-left: 2.5em;
+    padding-right: 1em;
+  }
+  .section__encrypted-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100% - 5em);
+    margin-top: 0;
+  }
+  .wellcome__munheco {
+    display: block;
+  }
+  .wellcome__title {
+    margin-top: 0.83em;
+  }
+  .wellcome__text {
+    margin: 0;
+  }
+  .encrypted-text__encrypted {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 10em);
+  }
+}

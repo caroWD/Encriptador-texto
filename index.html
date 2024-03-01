@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>encripText - Encriptador de texto</title>
+  <!-- Normalize | v8.0.1 -->
+  <link rel="stylesheet" href="styles/normalize.css" type="text/css">
+  <!-- Google Fonts | Inter | Regular - Bold -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Main Styes -->
+  <link rel="stylesheet" href="styles/styles.css" type="text/css">
+</head>
+<body class="bg-body">
+  <div class="container">
+    <header class="container__header">
+      <h1 class="header__logo">encripText</h1>
+    </header>
+    <main class="container__main">
+      <section class="main__section">
+        <div class="section__user-text">
+          <textarea name="userText" id="userText" cols="30" rows="8" placeholder="Ingrese el texto aquí" class="user-text__text-area"></textarea>
+          <p class="user-text__info-message">Solo letras minúsculas y sin acentos</p>
+        </div>
+        <div class="section__user-button">
+          <button class="user-button__btn" onclick="encryptedBtn()">Encriptar</button>
+          <button class="user-button__btn" onclick="decryptedBtn()">Desencriptar</button>
+        </div>
+      </section>
+      <section class="main__section">
+        <div class="section__encrypted-text">
+          <div class="encrypted-text__wellcome">
+            <img class="wellcome__munheco" src="img/munheco.jpeg" alt="Ilustración de un personaje con una lupa">
+            <h2 class="wellcome__title">Ningún mensaje fue encontrado</h2>
+            <p class="wellcome__text">Ingresa el texto que desees encriptar o desencriptar</p>
+          </div>
+          <div class="encrypted-text__encrypted inactive">
+            <p id="encryptedText" class="encrypted__text"></p>
+            <button class="encrypted__btn">Copiar</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+    </footer>
+  </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>
